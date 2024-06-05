@@ -1,0 +1,66 @@
+body {
+  background-color: rgb(72, 72, 169);
+  font: normal 15pt Arial;
+}
+
+header {
+  color: white;
+  text-align: center;
+}
+
+.comtaxa {
+  color: green;
+  font-style: bold;
+}
+
+.semtaxa {
+  color: red;
+}
+
+section {
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+  width: 500px;
+  margin: auto;
+  text-align: center;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.548);
+}
+
+#botao {
+  padding: 5px;
+
+}
+
+.opcoes {
+  display: inline;
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 12pt;
+  }
+
+  section {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 450px) {
+  body {
+    font-size: 10pt;
+  }
+
+  .opcoes {
+    display: block;
+    margin-bottom: 10pt;
+  }
+}
+
+
+
+footer {
+  color: white;
+  text-align: center;
+  font-style: italic;
+}

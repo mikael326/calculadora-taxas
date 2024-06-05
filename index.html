@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+    
+    <!-- modify -->
+    <title>Calculadora</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#33ffcc"/>
+    <!-- /manifest -->
+</head>
+<body>
+    <header>
+        <h1>Calculadora de Taxas</h1>
+      </header>
+      <section>
+        <div>
+          <div class="opcoes"><input type="radio" name="tipo" id="debito" onclick="javascript:checar()" checked> <label for="deb">Débito</label></div>
+          <div class="opcoes"><input type="radio" name="tipo" id="creditoVista" onclick="javascript:checar()"> <label for="creVista">Crédito à vista</label></div>
+          <div class="opcoes"><input class="inputfinal" type="radio" name="tipo" id="creditoParcelado" onclick="javascript:checar()"> <label class="inputfinal" for="creParce">Crédito parcelado</label></div>
+          <p>Digite o valor da venda: <input type="number" name="" id="valorCompra"></p>
+          <p id="paragrafo" style="display: none;">
+            Parcelas:
+            <select name="" id="select" onchange="limpaResposta()">
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+          </p>
+          <p><input type="button" value="calcular" onclick="calcular()" id="botao"></p>
+        </div>
+        <div id="res">
+    
+        </div>
+      </section>
+      <footer>
+        <p>&copy; MikaelCosta</p>
+      </footer>
+
+    <!-- load service worker -->
+    <script src="app.js"></script>
+    <!-- /load service worker -->
+</body>
+</html>
