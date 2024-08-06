@@ -41,7 +41,7 @@ let resposta = document.getElementById("res");
       optionSelecionado = select.value;
       switch (optionSelecionado) {
         case "2":
-          taxa = 9.9
+          taxa = 9.91
           calcularParcelado()
           break;
         case "3":
