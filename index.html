@@ -1,56 +1,73 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
-    
-    <!-- modify -->
-    <title>Calculadora</title>
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#33ffcc"/>
-    <!-- /manifest -->
-</head>
-<body>
-    <header>
-        <h1>Calculadora de Taxas</h1>
-      </header>
-      <section>
-        <div>
-          <div class="opcoes"><input type="radio" name="tipo" id="debito" onclick="javascript:checar()" checked> <label for="deb">Débito</label></div>
-          <div class="opcoes"><input type="radio" name="tipo" id="creditoVista" onclick="javascript:checar()"> <label for="creVista">Crédito à vista</label></div>
-          <div class="opcoes"><input class="inputfinal" type="radio" name="tipo" id="creditoParcelado" onclick="javascript:checar()"> <label class="inputfinal" for="creParce">Crédito parcelado</label></div>
-          <p>Digite o valor da venda: <input type="number" name="" id="valorCompra"></p>
-          <p id="paragrafo" style="display: none;">
-            Parcelas:
-            <select name="" id="select" onchange="limpaResposta()">
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-              <option value="10">10</option>
-              <option value="11">11</option>
-              <option value="12">12</option>
-            </select>
-          </p>
-          <p><input type="button" value="calcular" onclick="calcular()" id="botao"></p>
-        </div>
-        <div id="res">
-    
-        </div>
-      </section>
-      <footer>
-        <p>&copy; MikaelCosta</p>
-      </footer>
 
-    <!-- load service worker -->
-    <script src="app.js"></script>
-    <!-- /load service worker -->
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <!-- modify -->
+  <title>Taxas Mercado Pago</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#33ffcc" />
+  <!-- /manifest -->
+</head>
+
+<body>
+  <header>
+    <h1>Calculadora de Taxas Mercado Pago</h1>
+  </header>
+  <section>
+    <div>
+      <!-- Substituir a parte dos radio buttons por: -->
+      <div class="payment-options">
+        <button class="payment-btn active" data-type="debito" onclick="selectPayment(this)">
+          <i class="fas fa-credit-card"></i>
+          Débito
+        </button>
+        <button class="payment-btn" data-type="creditoVista" onclick="selectPayment(this)">
+          <i class="fas fa-money-check"></i>
+          Crédito à Vista
+        </button>
+        <button class="payment-btn" data-type="creditoParcelado" onclick="selectPayment(this)">
+          <i class="fas fa-clock"></i>
+          Crédito Parcelado
+        </button>
+      </div>
+      <p>Digite o valor da venda: <input type="number"  id="valorCompra"></p>
+      <p id="paragrafo" style="display: none;">
+        Parcelas:
+        <select name="" id="select" onchange="limpaResposta()">
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+        </select>
+      </p>
+      <p><input type="button" value="calcular" onclick="calcular()" id="botao"></p>
+    </div>
+    <div id="res">
+
+    </div>
+  </section>
+  <footer>
+    <p>&copy; MikaelCosta</p>
+  </footer>
+
+  <!-- load service worker -->
+  <script src="app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/decimal.js@10.3.1/decimal.min.js"></script>
+  <!-- /load service worker -->
 </body>
+
 </html>

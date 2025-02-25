@@ -1,11 +1,11 @@
 {
-    "theme_color": "#4a90e2",
-    "background_color": "#4a90e2",
+    "theme_color": "#FFC107",
+    "background_color": "#FFC107",
     "display": "minimal-ui",
-    "scope": "/calculadora-taxas/",
-    "start_url": "/calculadora-taxas/",
-    "name": "pwa-calculadora-taxas",
-    "short_name": "pwaCalculadora",
+    "scope": "https://mikael326.github.io/calculadora-taxas/",
+    "start_url": "https://mikael326.github.io/calculadora-taxas/",
+    "name": "calculadora de taxas PagSeguro",
+    "short_name": "Calculadora PagSeguro",
     "icons": [
         {
             "src": "icon-192x192.png",
